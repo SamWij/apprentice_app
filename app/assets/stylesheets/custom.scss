@@ -66,3 +66,45 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+/* footer */
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+footer img {
+  width:40px;
+  height: 40px;
+}
+
+.social {
+  margin-top: 10px;
+}
