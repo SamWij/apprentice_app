@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qual_name: MyString
+  qualschool: MyString
+  year_comp: 1
+
+two:
+  qual_name: MyString
+  qualschool: MyString
+  year_comp: 1

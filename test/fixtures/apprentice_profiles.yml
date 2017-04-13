@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qual_id: 1
+  license_id: 1
+  work_exp_id: 1
+  industry_type: MyString
+  summary: MyText
+
+two:
+  qual_id: 1
+  license_id: 1
+  work_exp_id: 1
+  industry_type: MyString
+  summary: MyText

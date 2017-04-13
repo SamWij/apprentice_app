@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  license_name: MyString
+  license_no: MyString
+  license_state: MyString
+
+two:
+  license_name: MyString
+  license_no: MyString
+  license_state: MyString
