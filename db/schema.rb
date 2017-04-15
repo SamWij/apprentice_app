@@ -10,41 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170408032506) do
+ActiveRecord::Schema.define(version: 20170415020729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "apprentice_profiles", force: :cascade do |t|
-    t.integer  "qual_id"
-    t.integer  "license_id"
-    t.integer  "work_exp_id"
-    t.string   "industry_type"
-    t.text     "summary"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  create_table "industries", force: :cascade do |t|
-    t.string   "industry_type"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
   create_table "licenses", force: :cascade do |t|
-    t.string   "license_name"
-    t.string   "license_no"
-    t.string   "license_state"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "name"
+    t.string   "number"
+    t.date     "expiry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "qualifications", force: :cascade do |t|
-    t.string   "qual_name"
-    t.string   "qualschool"
-    t.integer  "year_comp"
+    t.string   "name"
+    t.string   "school"
+    t.string   "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,13 +44,14 @@ ActiveRecord::Schema.define(version: 20170408032506) do
   end
 
   create_table "work_experiences", force: :cascade do |t|
-    t.string   "company_name"
-    t.string   "job_title"
-    t.text     "role_description"
-    t.date     "start"
-    t.date     "finish"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "company"
+    t.string   "job"
+    t.date     "date_started"
+    t.date     "date_finished"
+    t.text     "summary"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
   end
 
 end

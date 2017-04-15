@@ -1,0 +1,12 @@
+<li id="Qualification-<%= qualification.id %>">
+
+  <span class="content"><%= qualification.name %></span>
+  <span class="content"><%= qualification.school %></span>
+  <span class="content"><%= qualification.completed %></span>
+
+    <% if current_user?(qualification.user) %>
+      <%= link_to "delete", qualification, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+
+</li>

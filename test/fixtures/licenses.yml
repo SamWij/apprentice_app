@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  license_name: MyString
-  license_no: MyString
-  license_state: MyString
+  name: MyString
+  number: MyString
+  expiry: 2017-04-15
 
 two:
-  license_name: MyString
-  license_no: MyString
-  license_state: MyString
+  name: MyString
+  number: MyString
+  expiry: 2017-04-15

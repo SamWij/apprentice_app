@@ -1,0 +1,15 @@
+<h2>New License</h2>
+<%= form_for @license do |f| %>
+  <p>
+    Name: <%= f.text_field :name %>
+  </p>
+  <p>
+    License No: <%= f.text_field :number %>
+  </p>
+  <p>
+    Expiry Date: <%= f.text_field :expiry %>
+  </p>
+  <p>
+    <%= f.submit 'Create License' %>
+  </p>
+<% end %>

@@ -1,0 +1,21 @@
+<h2>New Work Experience</h2>
+<%= form_for @work do |f| %>
+  <p>
+    Company: <%= f.text_field :company %>
+  </p>
+  <p>
+    Job Title: <%= f.text_field :job %>
+  </p>
+  <p>
+    Duties: <%= f.text_field :summary %>
+  </p>
+  <p>
+    Date Started: <%= f.date_field :date_started %>
+  </p>
+  <p>
+    <p>
+      Date Finished: <%= f.date_field :date_finished %>
+    </p>
+    <%= f.submit 'Create License' %>
+  </p>
+<% end %>

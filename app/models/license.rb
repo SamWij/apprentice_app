@@ -1,3 +1,4 @@
 class License < ApplicationRecord
-  belongs_to :apprentice_profile
+  belongs_to :user
+  validates :user_id, presence: true
 end

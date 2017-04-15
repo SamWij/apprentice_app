@@ -1,4 +1,13 @@
 class User < ApplicationRecord
+  has_many :qualifications
+
+
+  has_many :licenses
+
+
+  has_many :work_experiences
+
+
   before_save { self.email = email.downcase }
   validates :firstname, presence: true, length: { maximum: 60 }
   validates :surname, presence: true, length: { maximum: 60 }
@@ -15,5 +24,9 @@ class User < ApplicationRecord
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
+  end
+
+  def feed
+    Qualification.where("user_id = ?", id)
   end
 end

@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  company_name: MyString
-  job_title: MyString
-  role_description: MyText
-  start: 2017-04-08
-  finish: 2017-04-08
+  company: MyString
+  job: MyString
+  date_started: 2017-04-15
+  date_finished: 2017-04-15
+  summary: MyText
 
 two:
-  company_name: MyString
-  job_title: MyString
-  role_description: MyText
-  start: 2017-04-08
-  finish: 2017-04-08
+  company: MyString
+  job: MyString
+  date_started: 2017-04-15
+  date_finished: 2017-04-15
+  summary: MyText
