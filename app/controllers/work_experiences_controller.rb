@@ -1,8 +1,10 @@
-class WorkExperienceController < ApplicationController
+class WorkExperiencesController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
+
   def create
     @work_experience = current_user.work_experiences.build(work_experience_params)
+
     if @work_experience.save
       flash[:success] = "Work Experience created!"
       redirect_to root_url
@@ -17,8 +19,8 @@ class WorkExperienceController < ApplicationController
     flash[:success] = "License deleted"
     redirect_to request.referrer || root_url
   end
-  
-    private
+
+  private
 
     def work_experience_params
       params.require(:work_experience).permit(:company, :job, :summary, :date_started, :date_finished)
