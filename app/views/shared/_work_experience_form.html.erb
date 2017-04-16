@@ -1,0 +1,19 @@
+<%= form_for(@work_experience) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :company, placeholder: "company name" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :job, placeholder: "title" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :summary, placeholder: "responsibilities" %>
+  </div>
+  <div class="field">
+    <%= f.date_field :date_started %>
+  </div>
+  <div class="field">
+    <%= f.date_field :date_finished %>
+  </div>
+  <%= f.submit "Add", class: "btn btn-primary" %>
+<% end %>

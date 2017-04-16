@@ -1,0 +1,6 @@
+<% if @work_items.any? %>
+  <ol class="Profile">
+    <%= render @work_items %>
+  </ol>
+  <%= will_paginate @work_items %>
+<% end %>

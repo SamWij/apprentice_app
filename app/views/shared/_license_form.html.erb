@@ -1,13 +1,13 @@
-<%= form_for(@qualification) do |f| %>
+<%= form_for(@license) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :name, placeholder: "qualification name" %>
+    <%= f.text_area :name, placeholder: "license name" %>
   </div>
   <div class="field">
-    <%= f.text_area :school, placeholder: "school" %>
+    <%= f.text_area :number, placeholder: "license number" %>
   </div>
   <div class="field">
-    <%= f.date_field :completed %>
+    <%= f.date_field :expiry %>
   </div>
   <%= f.submit "Add", class: "btn btn-primary" %>
 <% end %>

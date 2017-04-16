@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @qualifications = @user.qualifications.paginate(page: params[:page])
+    @licenses = @user.licenses.paginate(page: params[:page])
+    @work_experiences = @user.work_experiences.paginate(page: params[:page])
   end
 
   def new

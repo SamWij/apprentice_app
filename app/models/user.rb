@@ -1,10 +1,6 @@
 class User < ApplicationRecord
   has_many :qualifications
-
-
   has_many :licenses
-
-
   has_many :work_experiences
 
 
@@ -28,5 +24,12 @@ class User < ApplicationRecord
 
   def feed
     Qualification.where("user_id = ?", id)
+  end
+
+  def license
+    License.where("user_id = ?", id)
+  end
+  def work
+    WorkExperience.where("user_id = ?", id)
   end
 end

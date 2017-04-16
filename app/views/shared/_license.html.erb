@@ -1,0 +1,7 @@
+
+<% if @license_items.any? %>
+  <ol class="Profile">
+    <%= render @license_items %>
+  </ol>
+  <%= will_paginate @license_items %>
+<% end %>

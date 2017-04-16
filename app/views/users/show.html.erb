@@ -1,6 +1,6 @@
 <% provide(:title, @user.firstname) %>
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col">
     <section class="user_info">
       <h1>
         Welcome <%= @user.firstname %>
@@ -10,11 +10,29 @@
   </aside>
   <div class="col-md-8">
     <% if @user.qualifications.any? %>
-      <h3>Qualification (<%= @user.qualifications.count %>)</h3>
-      <ol class="microposts">
+      <h3>Qualifications</h3>
+      <ol class="qualifications">
         <%= render @qualifications %>
       </ol>
       <%= will_paginate @qualifications %>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <% if @user.licenses.any? %>
+      <h3>Licenses</h3>
+      <ol class="licenses">
+        <%= render @licenses %>
+      </ol>
+      <%= will_paginate @licenses %>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <% if @user.work_experiences.any? %>
+      <h3>Work Experience</h3>
+      <ol class="licenses">
+        <%= render @work_experiences %>
+      </ol>
+      <%= will_paginate @work_experiences %>
     <% end %>
   </div>
 </div>

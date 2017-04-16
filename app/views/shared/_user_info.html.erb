@@ -1,3 +1,5 @@
-<h1><%= current_user.firstname %></h1>
-<span><%= link_to "view my profile", current_user %></span>
+<h1>Profile of <%= current_user.firstname %></h1>
+<span><%= link_to "View My Profile", current_user %></span>
 <span><%= pluralize(current_user.qualifications.count, "Qualifications") %></span>
+<span><%= pluralize(current_user.licenses.count, "Licenses") %></span>
+<span><%= pluralize(current_user.work_experiences.count, "Work Experience") %></span>

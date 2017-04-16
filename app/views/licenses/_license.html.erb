@@ -1,0 +1,12 @@
+<li id="License-<%= license.id %>">
+
+  <h4><strong>License Name: </strong><%= license.name %></h4>
+  <h5><strong>Number: </strong><%= license.number %></h5>
+  <h5><strong>Expiry: </strong><%= license.expiry %></h5>
+
+    <% if current_user?(license.user) %>
+      <%= link_to "delete", license, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+
+</li>

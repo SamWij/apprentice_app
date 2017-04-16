@@ -1,8 +1,10 @@
+
+
 <li id="Qualification-<%= qualification.id %>">
 
-  <span class="content"><%= qualification.name %></span>
-  <span class="content"><%= qualification.school %></span>
-  <span class="content"><%= qualification.completed %></span>
+  <h4><strong>Qualification: </strong><%= qualification.name %></h4>
+  <h5><strong>School: </strong><%= qualification.school %></h5>
+  <h5><strong>Completed: </strong><%= qualification.completed %></h5>
 
     <% if current_user?(qualification.user) %>
       <%= link_to "delete", qualification, method: :delete,

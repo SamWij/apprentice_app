@@ -1,18 +1,39 @@
+
 <% if logged_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
+<div class="row">
+<aside class="col-md-4">
+  <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
+
       <section class="qualification_form">
         <%= render 'shared/qualification_form' %>
       </section>
-    </aside>
-    <div class="col-md-8">
-      <h3>Profile</h3>
+
+      <section class="license_form">
+        <%= render 'shared/license_form' %>
+      </section>
+
+      <section class="license_form">
+        <%= render 'shared/work_experience_form' %>
+      </section>
+
+</aside>
+
+  <div class="col-md-8">
+      <h3>Qualifications</h3>
       <%= render 'shared/feed' %>
     </div>
+    <div class="col-md-8">
+      <h3>Licenses</h3>
+      <%= render 'shared/license' %>
+    </div>
+    <div class="col-md-8">
+      <h3>Work Experience</h3>
+      <%= render 'shared/work' %>
+      </div>
   </div>
+
 <% else %>
 
 

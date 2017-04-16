@@ -1,0 +1,14 @@
+<li id="Work Experience-<%= work_experience.id %>">
+
+  <h4><%= work_experience.company %></h4>
+  <h5><%= work_experience.job %></h5>
+  <h5><%= work_experience.summary %></h5>
+  <h5><%= work_experience.date_started %></h5>
+  <h5><%= work_experience.date_finished %></h5>
+
+    <% if current_user?(work_experience.user) %>
+      <%= link_to "delete", work_experience, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+
+</li>
